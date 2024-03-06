@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+*, ::after, ::before {
+    box-sizing: content-box !important;
+}
+
+body{
+	font-family: 'Black Ops One';
+}
+
+.section {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 1%;
+  background: white;
+  max-width: 500px;
+  height: 612px;
+  border-radius: 5px;
+
+  -webkit-animation: glowing 1s ease-in-out infinite alternate;
+  -moz-animation: glowing 1s ease-in-out infinite alternate;
+  animation: glowing 3s ease-in-out infinite alternate;
+
+  box-shadow: 0 0 5px 1px white;
+  /*
+				
+  				transition: box-shadow 10s ease-out;
+  				animation: spin 4s linear infinite;
+*/
+}
+
+.game-menu {
+  margin-left: 20px;
+  margin-right: 15px;
+  padding-left: 25px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /*				background: wheat;*/
+  /*				border-radius: 15px;*/
+  /*				box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;*/
+}
+
+.box {
+  background: white;
+  /* color: #fae252; */
+  color: #7c5721;
+  text-align: center;
+  width: 10%;
+  margin-right: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  flex: 0 0 10%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, #93640b 0px 10px 10px;
+}
+
+.game-status {
+  margin-bottom: 5%;
+  /* margin-left: 19%; */
+  /* margin-right: 0%; */
+  padding-top: 30px;
+  font-size: 1.5em;
+}
+
+.game-status span {
+  font-size: 0.6em;
+  color: #7c5721;
+  /* background: #050c33; */
+  background: rgb(184 167 142 / 42%);
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.game-card {
+  position: relative;
+  padding-bottom: 30px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.trans {
+  transform: rotateY(180deg);
+}
+
+.game-card .card__face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+  -webkit-box-reflect: below 0
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4));
+}
+
+.game-card .card__face img {
+  width: 240px;
+  height: 300px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.game-card .card__face_back {
+  transform: rotateY(0.5turn);
+  background: rgb(184 167 142 / 42%);
+  margin-left: -1.1px;
+  border-radius: 5px;
+}
+
+.card__face_back p{
+	margin-top: 9px;
+    margin-bottom: 1rem;
+}
+
+.active {
+  background: white !important;
+}
+
+.selected {
+  display: none;
+}
+
+.total-selected {
+  display: none;
+}
+
+.start-menu {
+  /*				background: grey;*/
+  padding-top: 65%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.start-btn:focus {
+  background: black;
+  outline: -webkit-focus-ring-color auto 0px;
+  box-shadow: 5px 8px 5px 1px #222020;
+}
+
+.start-btn {
+  font-size: 2em;
+  color: white;
+  background: rgb(43, 194, 83);
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 5px 8px 5px 1px rgb(54, 148, 77);
+}
+
+@media (min-width: 220px) and (max-width: 399px) {
+  .section {
+	margin-top: 8%;
+    margin-left: 0%;
+    margin-right: 0%;
+    height: auto;
+  }
+
+  .game-menu {
+    padding-left: 32px;
+  }
+}
+
+@media (min-width: 400px) {
+  .section {
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 785px;
+  }
+
+  .game-menu {
+    padding-left: 37px;
+  }
+}
+
+@media (min-width: 766px) {
+  .section {
+    margin-top: 8%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: auto;
+  }
+
+  .game-menu {
+    margin-left: 12px;
+    margin-right: 14px;
+    padding-left: 8px;
+  }
+}
+
+@media (min-width: 820px) {
+  .game-menu {
+    padding-left: 13px;
+  }
+}
+
+@media (min-width: 912px) {
+
+
+
+  	.game-menu {
+  	  padding-left: 25px;
+  	}
+}
+
+@media (min-width: 1024px) {
+  .game-menu {
+    margin-left: 20px;
+    margin-right: 15px;
+    padding-left: 25px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .game-menu {
+   margin-left: 75px;
+    margin-right: 40px;
+    padding-left: 44px;
+  }
+}
